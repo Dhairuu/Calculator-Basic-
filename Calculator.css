@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Container {
+    overflow: hidden;
+    box-sizing: border-box;
+    /* padding: 10px; */
+    width: 414px;
+    height: 896px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    /* gap: 10px; */
+    background-color:black;
+    border-radius: 8px;
+    align-items: center;
+    justify-items: center;
+}
+
+.Buttons {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.Answer {
+    background-color: hsl(24, 92%, 46%);
+    color: white;
+}
+
+.Operators {
+    background-color: hsl(24, 92%, 46%);
+    color: white;
+}
+
+.OperatorToggle {
+    background-color: hsl(23, 51%, 59%);
+}
+
+.Operators:hover {
+    background-color: hsl(23, 51%, 59%);
+}
+
+.Special {
+    background-color: hsl(214, 8%, 51%);
+    color: rgb(0, 0, 0);
+}
+
+.Special:hover {
+    background-color: hsl(214, 10%, 73%);
+}
+
+.Operands {
+    background-color: hsl(0, 0%, 18%);
+    color: white;
+}
+
+.Operands:hover {
+    background-color: hsl(0, 0%, 41%);
+}
+
+#Display-Box {
+    width: 100%;
+    height: 300px;
+    font-size: 6em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    justify-content: right;
+    align-items: end;
+    grid-column: span 4;
+    color: white;
+}
+
+#Zero {
+    width: 160px;
+    height: 80px;
+    justify-content: left;
+    padding-left: 40px;
+    border-radius: 40px;
+    grid-column: span 2;
+}
+
+@media (max-width: 1280px) {
+    .Container {
+        padding: 10px;
+        height: 760px;
+        /* gap: 10px; */
+    }
+}
+
+@media (max-height: 390px) {
+    .Container {
+        width: 844px;
+        height: 390px;
+        gap: 0;
+        padding: 0;
+    }
+    #Display-Box {
+        height: 100px;
+    }
+    .Buttons {
+        width: 50px;
+        height: 50px;
+        font-size: 1em;
+    }
+    #Zero {
+        width: 100px;
+        height: 50px;
+    }
+}
